@@ -15,7 +15,6 @@ const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
-
 // const question = (num) => {
 //   const answerBool = readlineSync.keyInYN(`${'Question: '}${num}`);
 //   return answerBool;
@@ -77,4 +76,6 @@ const game = () => {
   }
 };
 
-export default game;
+export {
+  game, userName,
+};
