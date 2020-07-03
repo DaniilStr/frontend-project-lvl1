@@ -11,4 +11,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: make lint
+      - run: make lint
+        working-directory: ~/CODE/GitHab/frontend-project-lvl1
