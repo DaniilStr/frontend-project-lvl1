@@ -11,5 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: make lint
-        working-directory: ~/CODE/GitHab/frontend-project-lvl1
+      - name: npm install, build
+        run: |
+          make install
+          make lint
