@@ -1,5 +1,5 @@
 install: 
-	npm install
+	npm install -g
 
 brain-games:
 	node bin/brain-games.js
