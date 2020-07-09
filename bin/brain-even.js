@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-import game from '../src/index.js';
+import engine from '../src/index.js';
+import {
+  howToPlay, question, correctAnswer, userAnswer,
+} from '../src/games/game1.js';
 
-console.log('Welcome to the Brain Games!');
-game();
+engine(howToPlay, question, userAnswer, correctAnswer);

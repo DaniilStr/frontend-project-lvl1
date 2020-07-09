@@ -7,49 +7,22 @@ const userName = () => {
   return name;
 };
 
-const getRandomInt = (min, max) => {
-  // eslint-disable-next-line no-param-reassign
-  min = Math.ceil(min);
-  // eslint-disable-next-line no-param-reassign
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
-};
-
-const game = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const engine = (htp, question, fn1, fn2) => {
+  console.log('Welcome to the Brain Games!');
   const name = userName();
-  let current = 0;
+  console.log(htp);
+
   for (let i = 0; i < 3; i += 1) {
-    const num = getRandomInt(1, 20);
-    const correctAnswer = (num % 2 === 0) ? 'yes' : 'no';
-    const answerBool = readlineSync.keyInYN(`${'Question: '}${num}`, { guide: false });
-    let answerYN = null;
-    switch (answerBool) {
-      case true:
-        answerYN = 'yes';
-        break;
-      case false:
-        answerYN = 'no';
-        break;
-      default:
-        answerYN = 'incorrect input';
-        break;
+    question();
+    const userAnswer = fn1();
+    const correctAnswer = fn2();
+    if (userAnswer !== correctAnswer) {
+      console.log(`${"'"}${userAnswer}${"'"}${'is wrong answer ;(. Correct answer was '}${"'"}${correctAnswer}${"'.\n Let's try again, "}${name}`);
+      return;
     }
-    console.log(`${'Your answer: '}${answerYN}`);
-    if (answerBool === (num % 2 === 0)) {
-      console.log('Correct!');
-      current += 1;
-    } else if (answerBool === '') {
-      console.log(`${"'"}${answerYN}${"'"}${'is wrong answer ;(. Correct answer was '}${"'"}${correctAnswer}${"'.\n Let's try again, "}${name}`);
-      break;
-    } else if (answerBool !== (num % 2 === 0)) {
-      console.log(`${"'"}${answerYN}${"'"}${'is wrong answer ;(. Correct answer was '}${"'"}${correctAnswer}${"'.\n Let's try again, "}${name}`);
-      break;
-    }
+    console.log('Correct!');
   }
-  if (current === 3) {
-    console.log(`${'Congratulations, '}${name}${'!'}`);
-  }
+  console.log(`${'Congratulations, '}${name}${'!'}`);
 };
 
-export default game;
+export default engine;
