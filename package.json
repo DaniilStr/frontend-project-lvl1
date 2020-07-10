@@ -1,13 +1,14 @@
 {
   "name": "frontend-project-lvl1",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js"
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js"
   },
   "files": [
     "src"
