@@ -6,5 +6,6 @@
 <a href="https://asciinema.org/a/e1TNC4yloYIzN06zLM1kHvxKA">brain-calc<a>
 <a href="https://asciinema.org/a/mLoOy5Y1cE3n8wsYOVRvIPB2n">brain-gcd<a>
 <a href="https://asciinema.org/a/IB9sd7950FinxQvYk1kxEkFwM">brain-progression<a>
+<a href="https://asciinema.org/a/SfRbhVEfBvbX2rQxaM6hhYPwx">brain-prime<a>
 
 ![CI](https://github.com/DaniilStr/frontend-project-lvl1/workflows/CI/badge.svg)
