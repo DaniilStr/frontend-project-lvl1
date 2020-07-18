@@ -1,21 +1,16 @@
 /* eslint-disable max-len */
 import readlineSync from 'readline-sync';
 
-const userName = () => {
+const engine = (howToPlay, question, correctAnswer) => {
+  console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
-  return name;
-};
-
-const engine = (htp, question, fn1, fn2) => {
-  console.log('Welcome to the Brain Games!');
-  const name = userName();
-  console.log(htp);
+  console.log(howToPlay);
 
   for (let i = 0; i < 3; i += 1) {
-    question();
-    const userAnswer = fn1();
-    const correctAnswer = fn2();
+    console.log(question);
+    const userAnswer = readlineSync.question('Your answer: ');
+
     if (userAnswer !== correctAnswer) {
       console.log(`${"'"}${userAnswer}${"'"}${'is wrong answer ;(. Correct answer was '}${"'"}${correctAnswer}${"'.\n Let's try again, "}${name}`);
       return;
