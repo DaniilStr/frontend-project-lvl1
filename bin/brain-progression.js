@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-import engine from '../src/index.js';
-import {
-  howToPlay, question, correctAnswer, userAnswer,
-} from '../src/games/game4.js';
+import gameProgression from '../src/games/game-progression.js';
 
-engine(howToPlay, question, userAnswer, correctAnswer);
+gameProgression();

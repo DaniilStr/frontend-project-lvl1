@@ -2,14 +2,23 @@ import getRandomInt from '../utils.js';
 import engine from '../index.js';
 
 const isEven = (x) => (x % 2 === 0);
-const howToPlay = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const gameEven = () => {
-  let num = getRandomInt(1, 10);
-  const question = `${'Question: '}${num}`;
-  const correctAnswer = isEven(num) ? 'yes' : 'no';
+  const data = {
+    howToPlay: 'Answer "yes" if the number is even, otherwise answer "no".',
+    num: null,
+    getQuestion() {
+      console.log(`${'Question '}${this.num}`);
+    },
+    getCorrectAnswer() {
+      return isEven(this.num) ? 'yes' : 'no';
+    },
+    getNewData() {
+      this.num = getRandomInt(1, 10);
+    },
+  };
 
-  engine(howToPlay, question, correctAnswer);
+  engine(data);
 };
 
 export default gameEven;

@@ -1,21 +1,5 @@
-import readlineSync from 'readline-sync';
-
-const getRandomInt = (min, max) => {
-  // eslint-disable-next-line no-param-reassign
-  min = Math.ceil(min);
-  // eslint-disable-next-line no-param-reassign
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
-};
-
-const howToPlay = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-let num = null;
-
-const question = () => {
-  num = getRandomInt(1, 10);
-  console.log(`${'Question: '}${num}`);
-};
+import getRandomInt from '../utils.js';
+import engine from '../index.js';
 
 const isPrime = (x) => {
   for (let i = 2; i < x; i += 1) {
@@ -26,15 +10,21 @@ const isPrime = (x) => {
   return true;
 };
 
-function correctAnswer() {
-  return isPrime(num) ? 'yes' : 'no';
-}
-
-function userAnswer() {
-  const answer = readlineSync.question('Your answer: ');
-  return answer;
-}
-
-export {
-  howToPlay, question, correctAnswer, userAnswer,
+const gamePrime = () => {
+  const data = {
+    howToPlay: 'Answer "yes" if given number is prime. Otherwise answer "no".',
+    num: null,
+    getQuestion() {
+      console.log(`${'Question: '}${this.num}`);
+    },
+    getCorrectAnswer() {
+      return isPrime(this.num) ? 'yes' : 'no';
+    },
+    getNewData() {
+      this.num = getRandomInt(1, 10);
+    },
+  };
+  engine(data);
 };
+
+export default gamePrime;

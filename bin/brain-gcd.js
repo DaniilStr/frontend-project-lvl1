@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-import engine from '../src/index.js';
-import {
-  howToPlay, question, correctAnswer, userAnswer,
-} from '../src/games/game3.js';
+import gameGcd from '../src/games/game-gcd.js';
 
-engine(howToPlay, question, userAnswer, correctAnswer);
+gameGcd();
