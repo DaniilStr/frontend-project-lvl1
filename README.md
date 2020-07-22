@@ -1,6 +1,8 @@
 # frontend-project-lvl1
 
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/be03679117471128b0ae/maintainability)](https://codeclimate.com/github/DaniilStr/frontend-project-lvl1/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/be03679117471128b0ae/test_coverage)](https://codeclimate.com/github/DaniilStr/frontend-project-lvl1/test_coverage)
 
 ![CI](https://github.com/DaniilStr/frontend-project-lvl1/workflows/CI/badge.svg)
 
