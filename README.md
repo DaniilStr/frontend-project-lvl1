@@ -2,7 +2,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/be03679117471128b0ae/maintainability)](https://codeclimate.com/github/DaniilStr/frontend-project-lvl1/maintainability)
 
-![CI](https://github.com/DaniilStr/frontend-project-lvl1/workflows/CI/badge.svg?branch=master)
+![CI](https://github.com/DaniilStr/frontend-project-lvl1/actions)
 
 <a href="https://asciinema.org/a/h1sVMsb7u4sptytfFG1CgDsd7">brain-even</a>
 <a href="https://asciinema.org/a/e1TNC4yloYIzN06zLM1kHvxKA">brain-calc<a>
