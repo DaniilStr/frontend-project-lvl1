@@ -4,7 +4,6 @@
 
 ![CI](https://github.com/DaniilStr/frontend-project-lvl1/workflows/CI/badge.svg)
 
-<script id="asciicast-h1sVMsb7u4sptytfFG1CgDsd7" src="https://asciinema.org/a/h1sVMsb7u4sptytfFG1CgDsd7.js" async></script>
 
 [![asciicast](https://asciinema.org/a/h1sVMsb7u4sptytfFG1CgDsd7.svg)](https://asciinema.org/a/h1sVMsb7u4sptytfFG1CgDsd7)
 [![asciicast](https://asciinema.org/a/e1TNC4yloYIzN06zLM1kHvxKA.svg)](https://asciinema.org/a/e1TNC4yloYIzN06zLM1kHvxKA)
