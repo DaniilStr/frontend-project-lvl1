@@ -2,7 +2,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/be03679117471128b0ae/maintainability)](https://codeclimate.com/github/DaniilStr/frontend-project-lvl1/maintainability)
 
-![CI](<a href ="https://github.com/DaniilStr/frontend-project-lvl1/workflows/CI/badge.svg"></a>)
+[![CI](https://github.com/DaniilStr/frontend-project-lvl1/workflows/CI/badge.svg)](https://github.com/DaniilStr/frontend-project-lvl1/actions)
 
 
 [![asciicast](https://asciinema.org/a/h1sVMsb7u4sptytfFG1CgDsd7.svg)](https://asciinema.org/a/h1sVMsb7u4sptytfFG1CgDsd7)
