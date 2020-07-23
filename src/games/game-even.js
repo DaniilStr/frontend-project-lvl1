@@ -1,5 +1,5 @@
 import getRandomInt from '../utils.js';
-// import engine from '../index.js';
+import engine from '../index.js';
 
 const isEven = (x) => (x % 2 === 0);
 
