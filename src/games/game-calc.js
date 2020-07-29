@@ -1,36 +1,31 @@
 import getRandomInt from '../utils.js';
 import run from '../index.js';
 
-const operators = ['+', '-', '*', '/'];
+const operators = ['+', '-', '*'];
 const howToPlay = 'What is the result of the expression?';
 
 function getRandomOperator() {
-  const randomInt = getRandomInt(0, 3);
+  const randomInt = getRandomInt(0, operators.length - 1);
   return operators[randomInt];
 }
 
-const dataGen = () => {
-  const lOperand = getRandomInt(1, 10);
-  const rOperand = getRandomInt(1, 10);
-  const operator = getRandomOperator();
-  const question = `Question: ${lOperand}${operator}${rOperand}?`;
-
-  let answer = null;
+const getAnswer = (num1, num2, operator) => {
   switch (operator) {
     case '+':
-      answer = String(lOperand + rOperand);
-      break;
+      return String(num1 + num2);
     case '-':
-      answer = String(lOperand - rOperand);
-      break;
-    case '*':
-      answer = String(lOperand * rOperand);
-      break;
+      return String(num1 - num2);
     default:
-      answer = String(lOperand / rOperand);
-      break;
+      return String(num1 * num2);
   }
+};
 
+const dataGen = () => {
+  const num1 = getRandomInt(1, 10);
+  const num2 = getRandomInt(1, 10);
+  const operator = getRandomOperator();
+  const question = `${num1}${operator}${num2}`;
+  const answer = getAnswer(num1, num2, operator);
   return [question, answer];
 };
 

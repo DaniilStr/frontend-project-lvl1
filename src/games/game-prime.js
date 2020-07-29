@@ -5,9 +5,6 @@ const isPrime = (x) => {
   if (x < 2) {
     return false;
   }
-  if (x === 2) {
-    return true;
-  }
   for (let divisor = 2; divisor <= Math.floor(x / 2); divisor += 1) {
     if (x % divisor === 0) {
       return false;
@@ -20,7 +17,7 @@ const howToPlay = 'Answer "yes" if given number is prime. Otherwise answer "no".
 
 const dataGen = () => {
   const num = getRandomInt(0, 20);
-  const question = `${'Question: '}${num}`;
+  const question = num;
   const answer = isPrime(num) ? 'yes' : 'no';
   return [question, answer];
 };

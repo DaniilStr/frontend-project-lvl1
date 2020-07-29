@@ -10,18 +10,18 @@ const run = (howToPlay, dataGen) => {
   console.log(howToPlay);
 
   for (let i = 0; i < numberOfRounds; i += 1) {
-    const data = dataGen();
-    console.log(data[0]);
+    const [question, answer] = dataGen();
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer !== data[1]) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${data[1]}'.`);
+    if (userAnswer !== answer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${name}`);
       return;
     }
     console.log('Correct!');
   }
-  console.log(`${'Congratulations, '}${name}${'!'}`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default run;

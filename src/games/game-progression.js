@@ -3,31 +3,32 @@ import engine from '../index.js';
 
 const howToPlay = 'What number is missing in the progression?';
 
-const getScale = (step) => {
-  const scale = [getRandomInt(11, 19)];
-  for (let i = 1; i < 10; i += 1) {
-    scale.push(scale[i - 1] + step);
+const getProgression = (firstElement, progressionDifference, progressionLength) => {
+  const progression = [firstElement];
+  for (let i = 1; i < progressionLength; i += 1) {
+    progression.push(progression[i - 1] + progressionDifference);
   }
-  scale[getRandomInt(1, 9)] = '..';
-  return scale;
+  return progression;
 };
 
-const getAnswer = (step, scale) => {
-  let answer = null;
-  for (let i = 0; i < scale.length - 1; i += 1) {
-    if (scale[i] === '..') {
-      answer = String(scale[i - 1] + step);
-    }
-  }
-  return answer;
+const getAnswer = (progression) => {
+  const answer = progression[getRandomInt(0, 9)];
+  return String(answer);
+};
+
+const getQuestion = (progression, answer) => {
+  const question = progression;
+  question[question.indexOf(+answer)] = '..';
+  return question.join(', ');
 };
 
 const dataGen = () => {
-  const step = getRandomInt(2, 7);
-  const scale = getScale(step);
-  const question = `Question: ${scale}`;
-  const answer = getAnswer(step, scale);
-
+  const firstElement = getRandomInt(0, 20);
+  const progressionDifference = getRandomInt(2, 9);
+  const progressionLength = 10;
+  const progression = getProgression(firstElement, progressionDifference, progressionLength);
+  const answer = getAnswer(progression);
+  const question = getQuestion(progression, answer);
   return [question, answer];
 };
 
