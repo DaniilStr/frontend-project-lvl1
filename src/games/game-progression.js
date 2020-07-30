@@ -13,7 +13,7 @@ const getProgression = (firstElement, progressionDifference, progressionLength) 
 
 const getAnswer = (progression) => {
   const answer = progression[getRandomInt(0, 9)];
-  return String(answer);
+  return answer;
 };
 
 const getQuestion = (progression, answer) => {
@@ -27,7 +27,7 @@ const dataGen = () => {
   const progressionDifference = getRandomInt(2, 9);
   const progressionLength = 10;
   const progression = getProgression(firstElement, progressionDifference, progressionLength);
-  const answer = getAnswer(progression);
+  const answer = String(getAnswer(progression));
   const question = getQuestion(progression, answer);
   return [question, answer];
 };
