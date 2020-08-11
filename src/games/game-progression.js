@@ -2,33 +2,24 @@ import getRandomInt from '../utils.js';
 import engine from '../index.js';
 
 const howToPlay = 'What number is missing in the progression?';
+const progressionLength = 10;
 
-const getProgression = (firstElement, progressionDifference, progressionLength) => {
+const makeProgression = (firstElement, difference, length) => {
   const progression = [firstElement];
-  for (let i = 1; i < progressionLength; i += 1) {
-    progression.push(progression[i - 1] + progressionDifference);
+  for (let i = 1; i < length; i += 1) {
+    progression.push(progression[i - 1] + difference);
   }
   return progression;
-};
-
-const getAnswer = (progression) => {
-  const answer = progression[getRandomInt(0, 9)];
-  return answer;
-};
-
-const getQuestion = (progression, answer) => {
-  const question = progression;
-  question[question.indexOf(+answer)] = '..';
-  return question.join(', ');
 };
 
 const dataGen = () => {
   const firstElement = getRandomInt(0, 20);
   const progressionDifference = getRandomInt(2, 9);
-  const progressionLength = 10;
-  const progression = getProgression(firstElement, progressionDifference, progressionLength);
-  const answer = String(getAnswer(progression));
-  const question = getQuestion(progression, answer);
+  const hiddenItemIndex = getRandomInt(0, progressionLength - 1);
+  const progression = makeProgression(firstElement, progressionDifference, progressionLength);
+  const answer = String(progression[hiddenItemIndex]);
+  progression[hiddenItemIndex] = '..';
+  const question = progression.join();
   return [question, answer];
 };
 

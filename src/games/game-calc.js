@@ -9,14 +9,16 @@ function getRandomOperator() {
   return operators[randomInt];
 }
 
-const getAnswer = (num1, num2, operator) => {
+const calculateAnswer = (num1, num2, operator) => {
   switch (operator) {
     case '+':
-      return String(num1 + num2);
+      return num1 + num2;
     case '-':
-      return String(num1 - num2);
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
     default:
-      return String(num1 * num2);
+      throw new Error(`operator not found: '${operator}'!`);
   }
 };
 
@@ -25,7 +27,7 @@ const dataGen = () => {
   const num2 = getRandomInt(1, 10);
   const operator = getRandomOperator();
   const question = `${num1}${operator}${num2}`;
-  const answer = getAnswer(num1, num2, operator);
+  const answer = calculateAnswer(num1, num2, operator).toString();
   return [question, answer];
 };
 

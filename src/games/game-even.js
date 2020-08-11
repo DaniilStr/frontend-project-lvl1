@@ -6,7 +6,7 @@ const howToPlay = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const dataGen = () => {
   const num = getRandomInt(1, 10);
-  const question = num;
+  const question = String(num);
   const answer = isEven(num) ? 'yes' : 'no';
   return [question, answer];
 };

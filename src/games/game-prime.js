@@ -17,7 +17,7 @@ const howToPlay = 'Answer "yes" if given number is prime. Otherwise answer "no".
 
 const dataGen = () => {
   const num = getRandomInt(0, 20);
-  const question = num;
+  const question = String(num);
   const answer = isPrime(num) ? 'yes' : 'no';
   return [question, answer];
 };

@@ -11,10 +11,10 @@ const findGcd = (a, b) => {
 const howToPlay = 'Find the greatest common divisor of given numbers.';
 
 const dataGen = () => {
-  const lOperand = getRandomInt(1, 1000);
-  const rOperand = getRandomInt(1, 1000);
-  const question = `${lOperand} ${rOperand}`;
-  const answer = String(findGcd(lOperand, rOperand));
+  const num1 = getRandomInt(1, 1000);
+  const num2 = getRandomInt(1, 1000);
+  const question = `${num1} ${num2}`;
+  const answer = String(findGcd(num1, num2));
 
   return [question, answer];
 };
