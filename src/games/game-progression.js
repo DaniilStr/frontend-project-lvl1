@@ -5,14 +5,14 @@ const howToPlay = 'What number is missing in the progression?';
 const progressionLength = 10;
 
 const makeProgression = (firstElement, difference, length) => {
-  const progression = [firstElement];
-  for (let i = 1; i < length; i += 1) {
-    progression.push(progression[i - 1] + difference);
+  const progression = [];
+  for (let i = 0; i < length; i += 1) {
+    progression.push(firstElement + difference * i);
   }
   return progression;
 };
 
-const dataGen = () => {
+const generateData = () => {
   const firstElement = getRandomInt(0, 20);
   const progressionDifference = getRandomInt(2, 9);
   const hiddenItemIndex = getRandomInt(0, progressionLength - 1);
@@ -23,6 +23,6 @@ const dataGen = () => {
   return [question, answer];
 };
 
-const runGameProgression = () => engine(howToPlay, dataGen);
+const runGameProgression = () => engine(howToPlay, generateData);
 
 export default runGameProgression;

@@ -15,13 +15,13 @@ const isPrime = (x) => {
 
 const howToPlay = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const dataGen = () => {
+const generateData = () => {
   const num = getRandomInt(0, 20);
   const question = String(num);
   const answer = isPrime(num) ? 'yes' : 'no';
   return [question, answer];
 };
 
-const runGamePrime = () => run(howToPlay, dataGen);
+const runGamePrime = () => run(howToPlay, generateData);
 
 export default runGamePrime;
