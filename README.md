@@ -15,7 +15,7 @@
 Ниже демонстрационные видео по каждой игре.
 
 Определение четного числа.
-<a href="https://asciinema.org/a/h1sVMsb7u4sptytfFG1CgDsd7" target="_blank"><img src="https://asciinema.org/a/h1sVMsb7u4sptytfFG1CgDsd7.svg" /></a>
+<a href="https://asciinema.org/a/h1sVMsb7u4sptytfFG1CgDsd7?size=small" target="_blank"><img src="https://asciinema.org/a/h1sVMsb7u4sptytfFG1CgDsd7.svg" /></a>
 
 [![asciicast](https://asciinema.org/a/e1TNC4yloYIzN06zLM1kHvxKA.svg)](https://asciinema.org/a/e1TNC4yloYIzN06zLM1kHvxKA)
 [![asciicast](https://asciinema.org/a/mLoOy5Y1cE3n8wsYOVRvIPB2n.svg)](https://asciinema.org/a/mLoOy5Y1cE3n8wsYOVRvIPB2n)
